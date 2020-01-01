@@ -2,7 +2,7 @@
 
 This is a follow up project of CSE357 "Statistical Methods for Data Science". 
 
-# Part 1 - Hypthosis Test
+## Part 1 - Hypthosis Test
 In this statistical analysis we are testing if there is significant difference in score in the NBA by decades
 (1999 vs 2009) and (2009 vs 2019)
 
@@ -10,7 +10,14 @@ we are doing two test, a permuation test (NBA_Permuation_Test.py) and a k-s test
 
 The result show that there is significant differences.
 
-# Part 2 - Linear Regression
+## Part 2 - Linear Regression
+
+Fields Used in Training: 
+    FGP - Field Goal percentage
+    ORB - Offensive Rebounds/game
+    DRB - Defensive Rebounds/game
+    TRB - Total Rebounds/game
+    PTS - points/game
 
 
 
