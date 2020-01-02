@@ -56,14 +56,14 @@ def main():
     NBA_2019 = np.array(readfile("data/NBA_2019.csv"))
 
     Y_test = NBA_2019[:,4]
-    X_test = NBA_2019[:,[0,3]]
+    X_test = NBA_2019[:,0:4]
 
     print("Linear Regression Test")
     print("Test Data: 2019")
 
     print('====Part 1: 2018 as Training Data====')
     Y = NBA_2018[:,4] #PTS column
-    X = NBA_2018[:,0:3] #FGP, ORB, DRB, TRB, PTS for 2018
+    X = NBA_2018[:,0:4] #FGP, ORB, DRB, TRB, PTS for 2018
     BETA = training(X, Y)
     print(BETA)
 
@@ -78,8 +78,8 @@ def main():
     Y2 = NBA_2018[:,4] #PTS column for 2018
     Y = np.concatenate((Y1, Y2), axis=None)
 
-    X1 = NBA_2017[:,0:3] #FGP, ORB, DRB, TRB, PTS for 2017
-    X2 = NBA_2018[:,0:3] #FGP, ORB, DRB, TRB, PTS for 2018
+    X1 = NBA_2017[:,0:4] #FGP, ORB, DRB, TRB, PTS for 2017
+    X2 = NBA_2018[:,0:4] #FGP, ORB, DRB, TRB, PTS for 2018
     X = np.concatenate((X1, X2), axis=0)
 
     BETA = training(X, Y)
@@ -103,15 +103,15 @@ def main():
     Y9 = NBA_2018[:,4] #PTS column for 2018
     Y = np.concatenate((Y1, Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9), axis=None)
 
-    X1 = NBA_2010[:,0:3] #FGP, ORB, DRB, TRB, PTS for 2010
-    X2 = NBA_2011[:,0:3] #FGP, ORB, DRB, TRB, PTS for 2011
-    X3 = NBA_2012[:,0:3] #FGP, ORB, DRB, TRB, PTS for 2012
-    X4 = NBA_2013[:,0:3] #FGP, ORB, DRB, TRB, PTS for 2013
-    X5 = NBA_2014[:,0:3] #FGP, ORB, DRB, TRB, PTS for 2014
-    X6 = NBA_2015[:,0:3] #FGP, ORB, DRB, TRB, PTS for 2015
-    X7 = NBA_2016[:,0:3] #FGP, ORB, DRB, TRB, PTS for 2016
-    X8 = NBA_2017[:,0:3] #FGP, ORB, DRB, TRB, PTS for 2017
-    X9 = NBA_2018[:,0:3] #FGP, ORB, DRB, TRB, PTS for 2018
+    X1 = NBA_2010[:,0:4] #FGP, ORB, DRB, TRB, PTS for 2010
+    X2 = NBA_2011[:,0:4] #FGP, ORB, DRB, TRB, PTS for 2011
+    X3 = NBA_2012[:,0:4] #FGP, ORB, DRB, TRB, PTS for 2012
+    X4 = NBA_2013[:,0:4] #FGP, ORB, DRB, TRB, PTS for 2013
+    X5 = NBA_2014[:,0:4] #FGP, ORB, DRB, TRB, PTS for 2014
+    X6 = NBA_2015[:,0:4] #FGP, ORB, DRB, TRB, PTS for 2015
+    X7 = NBA_2016[:,0:4] #FGP, ORB, DRB, TRB, PTS for 2016
+    X8 = NBA_2017[:,0:4] #FGP, ORB, DRB, TRB, PTS for 2017
+    X9 = NBA_2018[:,0:4] #FGP, ORB, DRB, TRB, PTS for 2018
     X = np.concatenate((X1, X2, X3, X4, X5, X6, X7, X8, X9), axis=0)
 
     BETA = training(X, Y)
